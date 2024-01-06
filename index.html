@@ -1,0 +1,110 @@
+<!doctype html>
+<head>
+    <!-- Control de Caché -->
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+  
+    <!-- Configuración del Documento -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Calculadora escolar para resolver algoritmos de operaciones frecuentes. Potencia tus cálculos de manera manual con EducaMath.">
+    <meta name="keywords" content="calculadora, escolar, algoritmos, cálculo manual, EducaMath, herramienta educativa">
+    <meta name="author" content="Alex Alejo">
+  
+    <!-- Configuración de la Vista en Dispositivos Móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  
+    <!-- Título de la Página -->
+    <title>CALCULADORA EDUCAMATH - Potencia tus Cálculos Escolares</title>
+  
+    <!-- Enlace a Estilos CSS -->
+    <link rel="stylesheet" href="estilos.css">
+  
+    <!-- Icono de la Página -->
+    <link rel="icon" href="img/lcdaicon.jpg" type="image/jpg">
+  
+    <!-- Enlace a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  
+<body onload="alCargar()" onresize="alCargar()">
+  
+        <div class="wrapper">
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <header>CALCULADORA<span></span></header>
+	<div id="contenedor">
+        <div id="publiabajo">
+            <h3>by <a href="#" id="by">Alex Alejo</a></h3>
+            </div>
+		<div id="display"></div>
+		<div id="dondetodosucede">
+			<div id="teclado">
+                <button id="tc" onclick="escribir('c',false)">C</button>
+				<button id="tdel" onclick="escribir('del',false)"><i class="fa-solid fa-delete-left"></i></button>
+                <button id="trai" onclick="escribir('raiz',false)" disabled>√</button>
+                <button id="tpri" onclick="escribir('primos',false)" disabled>|</button>
+                <button id="t7" onclick="escribir('7',false)">7</button>
+				<button id="t8" onclick="escribir('8',false)">8</button>
+				<button id="t9" onclick="escribir('9',false)">9</button>
+				<button id="tmas" onclick="escribir('+',false)" disabled>+</button>
+                <button id="t4" onclick="escribir('4',false)">4</button>
+				<button id="t5" onclick="escribir('5',false)">5</button>
+				<button id="t6" onclick="escribir('6',false)">6</button>
+                <button id="tmen" onclick="escribir('-',false)" disabled>-</button>
+                <button id="t1" onclick="escribir('1',false)">1</button>
+				<button id="t2" onclick="escribir('2',false)">2</button>
+				<button id="t3" onclick="escribir('3',false)">3</button>
+                <button id="tpor" onclick="escribir('x',false)" disabled>x</button>
+                		
+				<button id="t0" onclick="escribir('0',false)">0</button>
+				<button id="tcom"  onclick="escribir(',',false)" disabled>,</button>
+			
+				<button id="tcal" onclick="calcular()" disabled>=</button>
+				
+			
+			
+				
+				<button id="tdiv" onclick="escribir('/',false)" disabled>/</button>
+			
+                
+	
+			
+			</div>
+			<div id="salida"></div>
+			<div id="divvolver">
+				<div id="volver" onclick="subirteclado()"><i class="fa-solid fa-arrow-down"></i></div>
+				<div id="botexp" onclick="divideExpandida(true)">COMPLETO</div>
+				<div id="botnor" onclick="divideExpandida(false)">NORMAL</div>
+			</div>	
+		</div>
+		
+	</div>
+    <footer>
+        <div class="footer-container">
+
+        <div class="footer-bottom">
+           
+          <p>      Inspirado en el proyecto "LA CALCULADORA DE ALICIA" de @JosePolLezcano</p>
+          <p>by <a href="#" id="by">Alex Alejo     </a>  </p>
+        </div>
+      </footer>
+      
+</body>
+<script src="js01.js"></script>
+
+
+</html>
